@@ -60,6 +60,10 @@ import ExtractCase from '../Components/ScoutPlat/ExtractCase';   //提取案件
 import AddCase from '../Components/ScoutPlat/ScoutComponents/AddCase';      //创建案件
 import ContentComponent from '../Components/Content/Index'; //中间主内容
 
+//----------jc start-----
+import ArchivesDetial from '../Components/ScoutFiles/archivesdetial/cover' //档案列表详情
+//----------jc end-----
+
 // 引入store
 import store from '../store/index';
 const routes = (App) => {
@@ -84,6 +88,7 @@ const routes = (App) => {
                         <Route path='/scoutFile' component={ScoutFile} />
                         <Route path='/caseDetail' component={CaseDetail} />
                         <Route path='/addCase' component={AddCase} />
+                        <Route path='/archivesdetial' component={ArchivesDetial} />
                         <Route path='/extractCase' component={ExtractCase} />
                         {/* 没有匹配到的路由重定向到首页或者是自己写一个404提示页面 */}
                         <Redirect to="/" />

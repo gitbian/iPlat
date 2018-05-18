@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Form, Input, Select, Upload, Button, Icon, message } from 'antd';
-
-
 import { httpAjax, addressUrl, UC_URL } from '../../Util/httpAjax';
 const FormItem = Form.Item;
 const { TextArea } = Input;
@@ -36,11 +34,9 @@ class FeedfackClue extends React.Component {
 					if (res.code === '200') {
 						message.success("反馈成功");
 						this.props.handleCancel();
-						this.props.getDataSource(10,1)
 					} else {
 						message.error("反馈失败");
 						this.props.handleCancel();
-						this.props.getDataSource(10,1)
 					}
 				})
 			}
@@ -95,7 +91,7 @@ class FeedfackClue extends React.Component {
 				</FormItem>
 				<div style={{ textAlign: 'center' }}>
 					<Button type='primary' htmlType="submit" style={{ marginRight: '10px' }}>提交</Button>
-					<Button onClick={this.props.handleCancel}>取消</Button>
+					<Button onClick={this.props.handleCancel }>取消</Button>
 				</div>
 			</Form>
 		)
